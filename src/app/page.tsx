@@ -1,6 +1,5 @@
 "use client";
 
-import styled from "styled-components";
 import HeaderComponent from "./components/Header";
 import Banner from "./components/Banner";
 import Services from "./components/Services";

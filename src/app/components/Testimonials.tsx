@@ -67,7 +67,7 @@ const testimonials = [
       position: "CEO, Company A"
     },
     {
-      quote: "Fantastic service! They delivered on time and on budget. Our website has seen increased traffic and engagement since the launch, and we couldn't be happier!",
+      quote: "Fantastic service! They delivered on time and on budget. Our website has seen increased traffic and engagement since the launch, and we could not be happier!",
       name: "Jane Smith",
       position: "Marketing Director, Company B"
     },
@@ -102,7 +102,7 @@ const Testimonials = () => {
       <TestimonialsGrid>
         {testimonials.map((testimonial, index) => (
           <TestimonialCard key={index}>
-            <TestimonialQuote>"{testimonial.quote}"</TestimonialQuote>
+            <TestimonialQuote>{testimonial.quote}</TestimonialQuote>
             <ClientName>{testimonial.name}</ClientName>
             <ClientPosition>{testimonial.position}</ClientPosition>
           </TestimonialCard>

@@ -92,7 +92,7 @@ const ContactUs = () => {
         <ContactContainer>
             <ContactTitle>Contact Us</ContactTitle>
             <ContactDescription>
-                We'd love to hear from you! Please fill out the form below and we will get back to you shortly.
+                We would love to hear from you! Please fill out the form below and we will get back to you shortly.
             </ContactDescription>
 
             <ContactForm>
@@ -119,7 +119,7 @@ const ContactUs = () => {
                 <FormField>
                     <div style={{ width: "100%" }}>
                         <FormLabel htmlFor="message">Message</FormLabel>
-                        <FormTextarea id="message" rows="5" placeholder="Your Message" required />
+                        <FormTextarea id="message" placeholder="Your Message" required />
                     </div>
                 </FormField>
                 <SubmitButton type="submit">Send Message</SubmitButton>

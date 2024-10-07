@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
+// Define the article structure
+interface Article {
+    title: string;
+    description: string;
+    url: string;
+    urlToImage?: string; // Optional property
+}
+
 // Styled-components for Blog Section
 const BlogContainer = styled.section`
   padding: 60px 40px;
@@ -86,9 +94,9 @@ const truncateText = (text: string, wordLimit: number) => {
 
 // Blog Component
 const Blog = () => {
-    const [articles, setArticles] = useState([]);
+    const [articles, setArticles] = useState<Article[]>([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState<string | null>(null); // Allow both null and string for error
 
     useEffect(() => {
         const fetchArticles = async () => {
@@ -103,7 +111,11 @@ const Blog = () => {
                 const data = await response.json();
                 setArticles(data.articles.slice(0, 3)); // Limit to 3 articles
             } catch (err) {
-                setError(err.message);
+                if (err instanceof Error) {
+                    setError(err.message); // Set the error message
+                } else {
+                    setError("An unknown error occurred");
+                }
             } finally {
                 setLoading(false);
             }

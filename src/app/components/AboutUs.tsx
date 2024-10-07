@@ -1,7 +1,6 @@
 // components/AboutUs.tsx
 import React from "react";
 import styled from "styled-components";
-import { FaFacebook, FaTwitter, FaLinkedin, FaYoutube } from "react-icons/fa";
 
 // Styled-components for About Us
 const AboutUsContainer = styled.section`
